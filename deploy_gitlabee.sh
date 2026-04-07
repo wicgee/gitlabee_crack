@@ -2,8 +2,8 @@ docker build -t gitlab-ee:crack .
 # export GITLAB_HOME=/gitlab
 # mkdir -p $GITLAB_HOME
 docker run --detach \
-  --hostname 127.0.0.1:80 \
-  --publish 80:80 \
+  --hostname gitlab.explorex-ai.com \
+  --publish 443:443 --publish 80:80 --publish 2222:22 \
   --name gitlab \
   --restart always \
   --volume $GITLAB_HOME/config:/etc/gitlab \
